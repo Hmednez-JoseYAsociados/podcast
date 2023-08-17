@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libro.css">
+    <title>Librería Online</title>
+</head>
+<body>
+    <head>
+        <title>Librería Online</title>
+    </head>
+    <body>
+        <h1>Listado de Libros</h1>
+    
+        <label for="search">Buscar libro o autor:</label>
+        <input type="text" id="search" onkeyup="searchBooks()" placeholder="Buscar...">
+    
+        <label for="genre">Filtrar por género:</label>
+        <select id="genre" onchange="filterByGenre()">
+            <option value="todos">Mostrar Todos</option>
+            <option value="Realismo Mágico">Realismo Mágico</option>
+            <option value="Historia">Historia</option>
+            <option value="Poesía">Poesía</option>
+            <option value="Ficción Histórica">Ficción Histórica</option>
+            <option value="Ensayo">Ensayo</option>
+            <option value="Política">Política</option>
+            <option value="Novela">Novela</option>
+            <option value="Cuentos">Cuentos</option>
+            
+            <!-- Agrega más opciones de género según sea necesario -->
+        </select>
+    
+        <table id="bookTable">
+            <tr>
+                <th>Libro</th>
+                <th>Autor</th>
+                <th>Género</th>
+            </tr>
+        <tr>
+            <td>Cien años de soledad</td>
+            <td>Gabriel García Márquez</td>
+            <td>Realismo mágico</td>
+        </tr>
+        <tr>
+            <td>La Fiesta del Chivo</td>
+            <td>Mario Vargas Llosa</td>
+            <td>Historia</td>
+        </tr>
+        <tr>
+            <td>La Sirena</td>
+            <td>Gioconda Belli</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>Los años con Laura Díaz</td>
+            <td>Carlos Fuentes</td>
+            <td>Ficción histórica</td>
+        </tr>
+        <tr>
+            <td>El Caribe, mar de nuestras vidas</td>
+            <td>Frank Moya Pons</td>
+            <td>Ensayo</td>
+        </tr>
+        <tr>
+            <td>La Cuestión Dominicana</td>
+            <td>Jaime Rodríguez</td>
+            <td>Política</td>
+        </tr>
+        <tr>
+            <td>Ybonc</td>
+            <td>Julia de Burgos</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>En el tiempo de las mariposas</td>
+            <td>Julia Álvarez</td>
+            <td>Ficción histórica</td>
+        </tr>
+        <tr>
+            <td>El Hombre del Siglo</td>
+            <td>Frank Moya Pons</td>
+            <td>Historia</td>
+        </tr>
+        <tr>
+            <td>De cómo las muchachas García perdieron el acento</td>
+            <td>Julia Álvarez</td>
+            <td>Ficción</td>
+        </tr>
+        <tr>
+            <td>La Fiesta ajena</td>
+            <td>Virgilio Díaz Grullón</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>¿Por qué lloraban las palomas?</td>
+            <td>Manuel de Jesús Galván</td>
+            <td>Novela histórica</td>
+        </tr>
+        <tr>
+            <td>El derecho de los vientos</td>
+            <td>Franklin Domínguez</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>Perico Ripiao</td>
+            <td>Franklin Domínguez</td>
+            <td>Novela</td>
+        </tr>
+        <tr>
+            <td>La inasible poesía de Pedrito Mir</td>
+            <td>Pedro Mir</td>
+            <td>Ensayo</td>
+        </tr>
+        <tr>
+            <td>La fértil agonía</td>
+            <td>Pedro Mir</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>Los ángeles vengadores</td>
+            <td>Franklin Domínguez</td>
+            <td>Novela</td>
+        </tr>
+        <tr>
+            <td>El escritor y sus fantasmas</td>
+            <td>Joaquín Balaguer</td>
+            <td>Ensayo</td>
+        </tr>
+        <tr>
+            <td>Sólo cenizas hallarás</td>
+            <td>Pedro Mir</td>
+            <td>Poesía</td>
+        </tr>
+        <tr>
+            <td>El vuelo de las luciérnagas</td>
+            <td>Manuel Rueda</td>
+            <td>Cuentos</td>
+        </tr>
+            
+            <!-- Agrega más filas con libros y autores según sea necesario -->
+        </table>
+        <p id="noResultsMessage" style="display: none;">No se encontraron resultados.</p>
+        <!-- Barra de formulario para añadir libros -->
+        <div class="add-book-form">
+            <input type="text" id="bookTitle" placeholder="Título del libro">
+            <input type="text" id="bookAuthor" placeholder="Autor">
+            <select id="bookGenre">
+                <option value="Realismo Mágico">Realismo Mágico</option>
+                <option value="Historia">Historia</option>
+                <option value="Poesía">Poesía</option>
+                <option value="Ficción Histórica">Ficción Histórica</option>
+                <option value="Ensayo">Ensayo</option>
+                <option value="Política">Política</option>
+                <option value="Novela">Novela</option>
+                <option value="Cuentos">Cuentos</option>
+                <!-- Agrega más opciones de género según sea necesario -->
+            </select>
+            <button onclick="addBook()">Añadir</button>
+            <button id="goBack"><a href="inicio.html">La G Pocast</a></button>
+        </div>
+        <script src="libros.js"></script>
+    </body>
+</html>
